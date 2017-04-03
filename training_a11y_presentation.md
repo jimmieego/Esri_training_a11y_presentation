@@ -228,11 +228,16 @@ $('body').on('focusin', function() {
 
 
 ### Alternate text
-- Images that convey meanings should set `alt` attribute
-  - Be accurate and equivalent in describing the image
+- Images that convey meanings/functions should set `alt` attribute
+  - Be accurate and equivalent in describing the image or its purpose
   - Keep it succinct
   - Words like "image of", "photo of" are not necessary
+
+
+
+### Alternate text
 - Decorative images should use `alt=""`
+- If text/content surrounding the graphic provides meaning, use `alt=""`
 
 
 
@@ -249,8 +254,45 @@ $('body').on('focusin', function() {
 
 
 ### Alternate text for SVGs
-- Include `<title></title>` tags after SVG object
-- Add `aria-label` on the SVG object itself
+(If the SVG conveys meaning)
+```html
+<svg xmlns=http://www.w3.org/2000/svg role="img"
+  aria-labelledby="title  desc">
+    <title id="title">Circle</title>
+    <desc id="desc">Large red circle with a black border</desc>
+    <circle role="presentation" cy="60" r="55"
+      stroke="black" stroke-width="2"
+      fill="red"
+    />
+</svg>
+```
+
+
+
+### Alternate text for SVGs
+(If the SVG is decorative)
+```html
+<p>
+  <svg aria-hidden="true">
+    <title>checkmark</title>
+    <use xlink:href="#icon-checkmark"></use>
+  </svg>
+  Success! Your order went through.
+</p>
+```
+
+
+
+### Alternate text for SVGs
+(Linked Icon, no text or text is not meaningful)
+```html
+<a href="link" aria-label="Add this to wish list">
+  <svg>
+    <use xlink:href="#icon-addcircle"></use>
+  </svg>
+  Wish List
+</a>
+```
 
 
 
@@ -277,7 +319,7 @@ $('body').on('focusin', function() {
 
 
 
-### label
+### Label
 Calcite Web pattern
 ```html
 <label>
@@ -535,8 +577,10 @@ Screen reader will report this as a checkbox.
 
 
 ## Screen reader basics
-- Mac: [VoiceOver](https://youtu.be/5R-6WvAihms)
-- Windows: [NVDA](https://youtu.be/Jao3s_CwdRU)
+- [Demo](https://youtu.be/fCPr12a6tPQ)
+- [a11ycasts](https://youtu.be/5R-6WvAihms)
+  - Mac: [VoiceOver](https://youtu.be/5R-6WvAihms)
+  - Windows: [NVDA](https://youtu.be/Jao3s_CwdRU)
 
 
 
@@ -547,7 +591,7 @@ Screen reader will report this as a checkbox.
 ## Resources
 - Documentation
   - [W3C-WCAG 2.0](https://www.w3.org/TR/WCAG20/)
-  - [Interpretation of success criteria](https://www.wuhcag.com/wcag-checklist/)
+  - [Interpretation of WCAG 2.0 success criteria](https://www.wuhcag.com/wcag-checklist/)
   - [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/)
 - Courses
   - egghead.io: [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
