@@ -124,6 +124,19 @@ Web Content Accessibility Guidelines
 
 
 
+### Sensory characteristics
+- [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html): Color is not used as the only visual means of conveying information.
+
+
+
+![Do not use color alone](images/coloralone_1.png)
+
+
+
+![Do not use color alone](images/coloralone_2.png)
+
+
+
 ### Keyboard access and focus
 - **Focus**: Which control on the screen currently receives input from keyboard.
 - **Focus ring**: visual focus indicator, style depending on browser and page style.  
