@@ -21,8 +21,8 @@
 
 
 
-Disabilities  
-<img src="images/MS_inclusive.jpg" width="35%" height="35%"/>
+### Wide Range of Disabilities  
+<img src="images/MS_inclusive.jpg" width="34%" height="34%"/>
 
 
 
@@ -393,10 +393,15 @@ Assistive technologies simulate and relay user interactions like click and key p
 
 
 
+### "Semantic" means something
+ <img src="images/generic-vs-semantic.png" />
+
+
+
 [Example](http://codepen.io/jimmieego/pen/yMePRB)
-```html
+ ```html
 <a href="http://www.esri.com">Esri Homepage</a>
-```
+ ```
 - Role="link"
 - Accessible name="Esri Homepage"
 - State="focusable"
@@ -424,6 +429,15 @@ Assistive technologies simulate and relay user interactions like click and key p
 
 
 
+<p style="text-align: left;">If a neutral element is interactive, we need to do extra work:</p>  
+- Make it **focusable**: `tabindex="0"`
+- Receive **keyboard events**: <kbd>Enter</kbd>, <kbd>Space</kbd>
+- **Name**: explicit label (`label`) or implicit text (`aria-label`, `aria-labelledby`)
+- **Role**
+- **States** and **properties**
+
+
+
 ### [WCAG 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 <table>
  	<tr>
@@ -446,12 +460,26 @@ Assistive technologies simulate and relay user interactions like click and key p
 
 
 
-<p style="text-align: left;">If a neutral element is interactive, we need to do extra work:</p>  
-- Make it **focusable**: `tabindex="0"`
-- Receive **keyboard events**: <kbd>Enter</kbd>, <kbd>Space</kbd>
-- **Name**: explicit label (`label`) or implicit text (`aria-label`, `aria-labelledby`)
-- **Role**
-- **States** and **properties**
+### Examples
+Name
+```html
+<input aria-label="Search course catalog" ... >
+```
+
+State
+```html
+<input aria-disabled="true" ... >
+```
+
+Role
+```html
+<span role="alert" ... >
+```
+
+Value
+```html
+<div role="slider" aria-valuenow="4" ... >
+```
 
 
 
