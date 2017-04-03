@@ -21,10 +21,8 @@
 
 
 
-## Disability
-- **Short-term**: injury, jet lag, eye surgery ...
-- **Long-term**: low vision, blind, deaf ...
-- **Situational**: eye fatigue, body pain, low light, occupied hand, driving ...
+Disabilities  
+<img src="images/MS_inclusive.jpg" width="35%" height="35%"/>
 
 
 
