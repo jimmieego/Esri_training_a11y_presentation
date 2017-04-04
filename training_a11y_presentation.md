@@ -627,6 +627,10 @@ Screen reader will report this as a checkbox.
 
 
 
+<img src="images/reporttable.png" style="height:100%; width:100%;" />
+
+
+
 ## Resources
 - Documentation
   - [W3C-WCAG 2.0](https://www.w3.org/TR/WCAG20/)
