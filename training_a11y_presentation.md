@@ -249,6 +249,7 @@ $('body').on('focusin', function() {
 ### Alternate text
 - Decorative images should use `alt=""`
 - If text/content surrounding the graphic provides meaning, use `alt=""`
+- [Decision tree](http://4syllables.com.au/articles/text-alternatives-decision-tree/)
 
 
 
