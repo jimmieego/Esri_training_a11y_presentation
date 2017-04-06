@@ -22,7 +22,8 @@
 
 
 ### Wide Range of Disabilities  
-<img src="images/MS_inclusive.jpg" width="34%" height="34%"/>
+<img style="display: block; margin: auto; " src="images/MS_inclusive.jpg" width="31%" height="31%"/>
+<a style="font-size: 10px;" href="https://www.microsoft.com/en-us/design/inclusive">Inclusive Design at Microsoft</a>
 
 
 
@@ -129,11 +130,13 @@ Web Content Accessibility Guidelines
 
 
 
-![Do not use color alone](images/coloralone_1.png)
+![Do not use color alone](images/coloralone_1.png)  
+<a style="font-size: 10px;" href="https://www.w3.org/WAI/gettingstarted/tips/designing.html">Tips on Designing for Web Accessibility</a>
 
 
 
-![Do not use color alone](images/coloralone_2.png)
+![Do not use color alone](images/coloralone_2.png)  
+<a style="font-size: 10px;" href="https://www.w3.org/WAI/gettingstarted/tips/designing.html">Tips on Designing for Web Accessibility</a>
 
 
 
@@ -345,7 +348,9 @@ Calcite Web pattern
 ### `aria-label`
 - Specifies a string as accessible label
 - Overrides native labeling
-![aria-label for menu button](images/aria-label.jpg)
+
+<img alt="aria-label for menu button" src="images/aria-label.jpg" style="display: block; margin: auto;" >
+<a style="font-size: 10px;" href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships">Google Developers</a>
 
 
 
@@ -354,14 +359,19 @@ Calcite Web pattern
 - Overrides all other name sources
 - Applicable to any element
 - Can specify visually hidden elements
-![aria-labelledby example](images/aria-labelledby.jpg)
+
+<img alt="aria-labelledby example" src="images/aria-labelledby.jpg" style="display: block; margin: auto;">
+<a style="font-size: 10px;" href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships">Google Developers</a>
 
 
 
 ### `aria-describedby`
 - Provides accessible description for an element
 - References elements in the DOM separated from current element
-![aria-describedby example](images/aria-describedby.jpg)
+
+<img alt="aria-describedby example" src="images/aria-describedby.jpg" style="display: block; margin: auto; max-width:80%;
+  max-height:80%; width: auto; height: auto;">
+<a style="font-size: 10px;" href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships">Google Developers</a>
 
 
 
@@ -377,7 +387,9 @@ Calcite Web pattern
 
 ### Accessibility tree
 Shows how website is interpreted by assistive technologies and how accessible data are provided.
-![Accessibility tree](images/a11ytreestructure.jpg)
+<img alt="Accessibility tree" src="images/a11ytreestructure.jpg" style="display: block; margin: auto; max-width:80%;
+  max-height:80%; width: auto; height: auto; margin-top: 15px;">
+<a style="font-size: 10px;" href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Google Developers</a>
 
 
 
@@ -408,7 +420,8 @@ Assistive technologies simulate and relay user interactions like click and key p
 
 
 ### "Semantic" means something
- <img src="images/generic-vs-semantic.png" />
+ <img src="images/generic-vs-semantic.png" style="display:block; margin: auto;"/>
+<a href="https://github.com/marcysutton/a-web-for-everybody" style="font-size:10px;" >Marcy Sutton: A Web for Everybody</a>
 
 
 
@@ -508,6 +521,7 @@ Value
 
 <img alt="Normal DOM tree" src="images/aria_a11tree_1.jpg" width="40%" height="40%" />
 <img alt="ARIA complement accessibility tree" src="images/aria_a11tree_2.jpg" width="40%" height="40%" />
+<a href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/" style="font-size:10px; display: block;">Google Developers</a>
 
 
 
