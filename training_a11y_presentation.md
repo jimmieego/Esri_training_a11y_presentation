@@ -15,9 +15,9 @@
 
 
 
-## Introduction
-- About 15% of world population lives with some form of disability
-- 1 billion people
+About 15% of world population lives with some form of disability
+
+**1 billion** people
 
 
 
@@ -27,39 +27,8 @@
 
 
 
-## Forms of Disability
-<img src="images/disabilityforms.png" style="all:initial; height: 70%; width: 70%;" />
-
-
-
-### Visual
-<p>A broad range from <strong>no vision</strong> (total blindness) to <strong>limited or low vision</strong></p>
-
-
-
-### Motor
-<p>Users may prefer not to use a mouse, have <strong>RSI</strong> (Repetitive Strain Injury), or physical <strong>paralysis</strong> and <strong>limited range of motion</strong></p>
-
-
-
-### Auditory
-<p>Users may be <strong>completely deaf</strong> or <strong>hard of hearing</strong></p>
-
-
-
-### Cognitive
-<p style="text-align: left;">A broad range including:</p>
-<ul>
-<li>Learning disabilities</li>
-<li>Reading disorders(**dyslexia**)</li>
-<li>Attention deficit disorders(**ADHD** and **autism**)</li>
-</ul>
-<p style="text-align: left;">Far more users with cognitive disabilities than all the other types of disabilities combined.</p>
-
-
-
 ## Benefits of Accessibility
-- Accessible interfaces is about good design and coding practice
+- Accessible interface is about good design and coding practice
 - Good accessibility is good user experience
 - Accessibility will enhance design, not destroy it
 
@@ -106,8 +75,7 @@ Web Content Accessibility Guidelines
 
 
 ### Color contrast
-[WCAG 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html): Color contrast ratio is at least **4.5:1** for normal text and at least **3:1** for large text.
-- Large text: at least 18 point or 14 point bold
+[WCAG 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html): Color contrast ratio is at least **4.5:1** for normal text and at least **3:1** for large text (i.e., at least 18 point or 14 point bold).
 
 
 
@@ -163,16 +131,7 @@ Web Content Accessibility Guidelines
 
 
 
-### Tab order matters
-- **Tab order**: The order in which focus proceeds forward and backward through interactive elements via <kbd>Tab</kbd> key.
-
-
-
-### Keyboard
-- Interactive elements have expected interactions:
-  - Link: click, tap, or <kbd>Enter</kbd> key
-  - Button: click, tap, <kbd>Enter</kbd> key, or **<kbd>Space</kbd>** key
-  - Input: click, tap, or <kbd>Enter</kbd> key
+**Tab order**: The order in which focus proceeds forward and backward through interactive elements via <kbd>Tab</kbd> key.
 
 
 
@@ -211,27 +170,26 @@ focus the next available child -->
 
 
 ### Keyboard traps
-- Keyboard focus should not be locked or trapped at one particular element.
-- **Temporary** keyboard trap is necessary for modal dialogs:
- - When modal is displayed: trap focus inside modal.
- - When modal is closed: restore focus to previously focused item.
- - [Demo](http://gdkraus.github.io/accessible-modal-dialog/) | [Example code](https://github.com/gdkraus/accessible-modal-dialog)
+Keyboard focus should not be locked or trapped at one particular element.
 
 
 
- ### Test focus
+### **Temporary** keyboard trap
+- Necessary for modal dialogs:
+  - When modal is displayed: trap focus inside modal.
+  - When modal is closed: restore focus to previously focused item.
+- [Demo](http://gdkraus.github.io/accessible-modal-dialog/) | [Example code](https://github.com/gdkraus/accessible-modal-dialog)
+
+
+
+### Test focus
  - Tab through page to verify tab order doesn't disappear or jump out of logical sequence
  - Make sure to hide offscreen content
  - Rearrange elements' position in the DOM if necessary
 
 
 
- ### Which item has focus?
- ```javascript
-$('body').on('focusin', function() {
-    console.log(document.activeElement);
-});
-```
+### Which item has focus?
 [Force Show Keyboard Focus Bookmarklet](http://pauljadam.com/bookmarklets/focus.html)
 
 
@@ -253,61 +211,6 @@ $('body').on('focusin', function() {
 - Decorative images should use `alt=""`
 - If text/content surrounding the graphic provides meaning, use `alt=""`
 - [Decision tree](http://4syllables.com.au/articles/text-alternatives-decision-tree/)
-
-
-
-### Alternate text for icon fonts
-```html
-<style>
-  .icon-star:before { content: "★"; }
-</style>
-
-<span><span class="icon-star" aria-hidden="true"></span>Favorite</span>
-```
-[Accessible Icon Fonts](https://www.filamentgroup.com/lab/bulletproof_icon_fonts.html)
-
-
-
-### Alternate text for SVGs
-(If the SVG conveys meaning)
-```html
-<svg xmlns=http://www.w3.org/2000/svg role="img"
-  aria-labelledby="title  desc">
-    <title id="title">Circle</title>
-    <desc id="desc">Large red circle with a black border</desc>
-    <circle role="presentation" cy="60" r="55"
-      stroke="black" stroke-width="2"
-      fill="red"
-    />
-</svg>
-```
-
-
-
-### Alternate text for SVGs
-(If the SVG is decorative)
-```html
-<p>
-  <svg aria-hidden="true">
-    <title>checkmark</title>
-    <use xlink:href="#icon-checkmark"></use>
-  </svg>
-  Success! Your order went through.
-</p>
-```
-
-
-
-### Alternate text for SVGs
-(Linked Icon, no text or text is not meaningful)
-```html
-<a href="link" aria-label="Add this to wish list">
-  <svg>
-    <use xlink:href="#icon-addcircle"></use>
-  </svg>
-  Wish List
-</a>
-```
 
 
 
@@ -445,7 +348,7 @@ Assistive technologies simulate and relay user interactions like click and key p
 
 
 
-[Demo](https://youtu.be/pClOpS_g-iQ)
+[**Semantics Demo**](https://youtu.be/pClOpS_g-iQ)
 
 
 
@@ -525,17 +428,6 @@ Value
 
 
 
-<p style="text-align: left;">ARIA doesn't augment any of the element's inherent behavior:</p>
-<div align="left">
-	<ul>
-		<li>Focusable</li>
-		<li>Keyboard event listeners</li>
-	</ul>
-</div>
-<p style="text-align: left;">Custom behaviors still need to be implemented</p>  
-
-
-
 ### ARIA attributes
 
 | Type | Purpose | Examples |
@@ -568,12 +460,12 @@ Screen reader will report this as a checkbox.
 
 
 
-[Demo](https://youtu.be/oOEwGb6k97I)
+[**ARIA Demo**](https://youtu.be/oOEwGb6k97I)
 
 
 
 ### ARIA best practices
-<p style="text-align:left;">1. Do not change native semantics, unless you *really* have to.</p>
+<p style="text-align:left;"><strong>1</strong>. Do not change native semantics, unless you *really* have to.</p>
  - Example: A developer wants to implement a heading which is also a button.
  - Don't do this:
 ```html
@@ -585,7 +477,7 @@ Screen reader will report this as a checkbox.
 ```
 
 
-<p style="text-align:left;">2. All interactive ARIA elements must be usable with keyboard.</p>
+<p style="text-align:left;"><strong>2</strong>. All interactive ARIA elements must be focusable and usable with keyboard.</p>
 
 
 - The elements should respond to standard key strokes.
@@ -596,7 +488,7 @@ Screen reader will report this as a checkbox.
  - Example: If allowing clicking through data grid, support navigating grid cells using keyboard.
 
 
- <p style="text-align:left;">3. Do not use `role="presentation"` or `aria-hidden="true"` on a visible and focusable element.</p>
+ <p style="text-align:left;"><strong>3</strong>. Do not use `role="presentation"` or `aria-hidden="true"` on a visible and focusable element.</p>
  <div align="left">
  <ul>
  <li>This will result in focusing on "nothing".</li>
@@ -610,7 +502,7 @@ Screen reader will report this as a checkbox.
  ```
 
 
- <p style="text-align:left;">4. All interactive elements must have an accessible label or name.</p>
+ <p style="text-align:left;"><strong>4</strong>. All interactive elements must have an accessible label or name.</p>
 <p style="text-align:left;">Do this:</p>
 ```html
 <label>
@@ -662,3 +554,58 @@ Screen reader will report this as a checkbox.
 
 <section data-background-image="images/lastslide.png">
 </section>
+
+
+
+### Alternate text for icon fonts
+```html
+<style>
+  .icon-star:before { content: "★"; }
+</style>
+
+<span><span class="icon-star" aria-hidden="true"></span>Favorite</span>
+```
+[Accessible Icon Fonts](https://www.filamentgroup.com/lab/bulletproof_icon_fonts.html)
+
+
+
+### Alternate text for SVGs
+(If the SVG conveys meaning)
+```html
+<svg xmlns=http://www.w3.org/2000/svg role="img"
+  aria-labelledby="title  desc">
+    <title id="title">Circle</title>
+    <desc id="desc">Large red circle with a black border</desc>
+    <circle role="presentation" cy="60" r="55"
+      stroke="black" stroke-width="2"
+      fill="red"
+    />
+</svg>
+```
+
+
+
+### Alternate text for SVGs
+(If the SVG is decorative)
+```html
+<p>
+  <svg aria-hidden="true">
+    <title>checkmark</title>
+    <use xlink:href="#icon-checkmark"></use>
+  </svg>
+  Success! Your order went through.
+</p>
+```
+
+
+
+### Alternate text for SVGs
+(Linked Icon, no text or text is not meaningful)
+```html
+<a href="link" aria-label="Add this to wish list">
+  <svg>
+    <use xlink:href="#icon-addcircle"></use>
+  </svg>
+  Wish List
+</a>
+```
